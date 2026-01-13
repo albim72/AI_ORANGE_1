@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn import datasets,metrics,svm
+from sklearn.model_selection import train_test_split
 
 # --- 1) Wykres funkcji sigmoid ---
 x = np.linspace(-10, 10, 1000)
@@ -38,3 +40,7 @@ plt.close(fig)
 print("Wzór matematyczny funkcji sigmoid:")
 print("σ(x) = 1 / (1 + e^{-x})")
 print(f"Zapisano obraz ze wzorem do pliku: {output_path}")
+
+
+#ładowanie danych ze zbioru digits
+digits = datasets.load_digits()
